@@ -1,7 +1,7 @@
 function deepseek_response = call_deepseek_api(modelnum,prompt)
 %modelnum 1-V3, 2-R1
 api_url = 'https://api.deepseek.com/v1/chat/completions';
-api_key = 'sk-799cd5d99e22427d8ad0eb379e432a7a';
+api_key = 'sk-799';
 headers = matlab.net.http.HeaderField(...
     'Content-Type', 'application/json',...
     'Authorization', ['Bearer ' api_key]);
@@ -33,4 +33,5 @@ catch ME
         error('API请求失败: %s', ME.message);
     end
 end
+
 end
